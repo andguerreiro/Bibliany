@@ -1,110 +1,124 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-  <meta charset="UTF-8">
-  <title>Bibliany - Pesquise livros digitais e audiolivros em bibliotecas públicas online</title>
-  <meta name="description" content="Pesquise livros digitais e audiolivros em bibliotecas públicas online">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="icon" type="image/png" href="logo.png" />
-  <style>
-    /* Reset CSS */
-    *, *::before, *::after {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
+<meta charset="UTF-8">
+<title>Livrani - Pesquise Preços de Livros em Sites Selecionados</title>
+<meta name="description" content="Pesquise Preços de Livros em Sites Selecionados">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" type="image/png" href="logo.png" />
+<style>
+/* Reset CSS */
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-    /* Global Styles */
-    body {
-      font-family: Arial, sans-serif;
-      line-height: 1.6;
-      background-color: white;
-      color: black;
-    }
+/* Global Styles */
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  background-color: white;
+  color: black;
+}
 
-    /* Header Styles */
-    header {
-      text-align: center;
-      padding: 20px 0;
-      background-color: black;
-      color: white;
-    }
+a {
+  color: black;
+  text-decoration: underline;
+}
 
-    header h1 {
-      font-size: 36px;
-    }
-
-    /* Content Styles */
-    .container {
-      max-width: 600px;
-      margin: 0 auto;
-      padding: 20px;
-      background-color: white;
-      border-radius: 10px;
-      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-    }
-
-    .search-form {
-      margin-top: 20px;
-    }
-
-    select, input, button {
-      margin: 10px 0;
-      padding: 10px;
-      font-size: 16px;
-      border: 1px solid #ccc;
-      border-radius: 7px;
-      width: 100%;
-      box-sizing: border-box;
-    }
-
-    button {
-      background-color: black;
-      color: white;
-      border: none;
-      cursor: pointer;
-    }
-
-    /* Footer Styles */
-  footer {
-    text-align: center;
-    margin-top: 20px;
-    font-size: 14px;
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: #343541; 
+    color: white; 
   }
-
-  footer a {
-    color: black;
+  
+  footer .white-link {
+    color: white;
     text-decoration: underline;
   }
-  </style>
+}
+
+/* Header Styles */
+header {
+  text-align: center;
+  background-color: black;
+  padding: 20px 0;
+  color: white;
+}
+
+header h1 {
+  font-size: 36px;
+}
+
+/* Search Form Styles */
+.search-form {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  text-align: center;
+}
+
+select, input, button {
+  margin: 10px 0;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 7px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+button {
+  background-color: black;
+  color: white;
+  border: none;
+  width: 150px;
+  cursor: pointer;
+  margin: 0 auto;
+}
+
+/* Footer Styles */
+footer {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 14px;
+}
+
+footer a {
+  color: black;
+  text-decoration: underline;
+}
+</style>
 </head>
 <body>
 <header>
   <img src="logo.png" height="128px" width="128px" alt="Logo">
-  <h1>Bibliany</h1>
+  <h1>Livrani</h1>
+  <p>Encontre os melhores preços de livros em sites selecionados.</p>
 </header>
-<div class="container">
-  <p>Pesquise livros digitais e audiolivros em bibliotecas públicas online</p>
-  <form class="search-form" name="searchform" onSubmit="return dosearch();">
-    <select name="bibliotecas">
-      <option value="https://biblion.odilo.us/results?limit=24&offset=0&order=relevance:desc&query=allfields_txt:">BibliON</option>
-      <option value="https://spleituras.tocalivros.com/audiolivros-e-ebooks?buscar=">SP Leituras</option>
-      <option value="https://bibliotecaparquedigital.odilo.us/results?limit=24&offset=0&order=relevance:desc&query=allfields_txt:">Parque Digital</option>
-      <option value="https://www2.senado.leg.br/bdsf/discover?scope=%2F&submit=Ir&filtertype_0=type&filter_relational_operator_0=notequals&filter_0=Artigo+de+jornal&query=">Biblioteca do Senado</option>
-      <option value="https://funag.gov.br/biblioteca-nova/todos/0?filtro=1&ord=1&busca=">Biblioteca da FUNAG</option>
-      <option value="https://bdor.sibi.ufrj.br/simple-search?query=">Biblioteca UFRJ</option>
+<div class="search-form">
+  <form name="searchform" onSubmit="return dosearch();">
+    <select name="sites">
+      <option value="https://www.estantevirtual.com.br/busca?b_order=preco&offset=1&q=">Estante Virtual</option>
+      <option value="https://www.amazon.com.br/s?i=stripbooks&__mk_pt_BR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&ref=nb_sb_noss&k=">Amazon Brasil</option>
+      <option value="https://livros.mercadolivre.com.br/">Mercado Livre</option>
+      <option value="https://shopee.com.br/search?category=26820&order=asc&page=0&sortBy=price&keyword=">Shopee</option>
+      <option value="https://www.enjoei.com.br/s?ref=products_search&d=etc-tal&sr=near_regions&o=low_price&q=">Enjoei</option>
+      <option value="https://www.google.com/search?hl=pt-BR&tbm=shop&q=">Google Shopping</option>
     </select>
-    <input type="search" name="searchterms" placeholder="Digite um título ou autor..."  autofocus>
+    <input type="search" name="searchterms" placeholder="Digite um título ou autor..." autofocus>
     <button type="submit">Buscar</button>
+    <button type="reset">Limpar</button>
   </form>
 </div>
 <footer>
-  <p>Código fonte aberto no <a href="https://gitlab.com/andguerreiro/bibliany" target="_blank">GitLab</a>.</p>
+  <p>Código fonte no <a href="https://gitlab.com/andguerreiro/livrani" target="_blank" class="white-link">GitLab</a>.</p>
 </footer>
 <script type="text/javascript">
   function dosearch() {
     var sf = document.searchform;
-    var submitto = sf.bibliotecas.options[sf.bibliotecas.selectedIndex].value + sf.searchterms.value;
+    var submitto = sf.sites.options[sf.sites.selectedIndex].value + sf.searchterms.value;
     window.open(submitto);
     return false;
   }
