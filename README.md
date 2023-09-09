@@ -1,4 +1,4 @@
-# [Bibliany](https://bibliany.github.io)
+# [Bibliany](https://andguerreiro.gitlab.io/bibliany)
 
 Pesquise livros digitais e audiolivros em bibliotecas públicas online
 
