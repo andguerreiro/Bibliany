@@ -6,4 +6,4 @@ Criado e atualizado por A. M. Guerreiro, livreiro do [sebomelivro.com](https://s
 
 Logo criado por vectorsmarket15 e baixado de [flaticon.com](https://flaticon.com)
 
-[andguerreiro.gitlab.io/bibliany](https://andguerreiro.gitlab.io/bibliany)
+[amguerreiro.gitlab.io/bibliany](https://amguerreiro.gitlab.io/bibliany)
