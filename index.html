@@ -98,9 +98,9 @@ footer a {
   <h1>Bibliany</h1>
   <p>Pesquise livros digitais e audiolivros em bibliotecas públicas online</p>
 </header>
-<div class="container">
-  <form class="search-form" name="searchform" onSubmit="return dosearch();">
-    <select name="bibliotecas">
+<div class="search-form">
+  <form name="searchform" onSubmit="return dosearch();">
+    <select name="sites">
       <option value="https://biblion.odilo.us/results?limit=24&offset=0&order=relevance:desc&query=allfields_txt:">BibliON</option>
       <option value="https://spleituras.tocalivros.com/audiolivros-e-ebooks?buscar=">SP Leituras</option>
       <option value="https://bibliotecaparquedigital.odilo.us/results?limit=24&offset=0&order=relevance:desc&query=allfields_txt:">Parque Digital</option>
@@ -108,7 +108,7 @@ footer a {
       <option value="https://funag.gov.br/biblioteca-nova/todos/0?filtro=1&ord=1&busca=">Biblioteca da FUNAG</option>
       <option value="https://bdor.sibi.ufrj.br/simple-search?query=">Biblioteca UFRJ</option>
     </select>
-    <input type="search" name="searchterms" placeholder="Digite um título ou autor..."  autofocus>
+    <input type="search" name="searchterms" placeholder="Digite um título ou autor..." autofocus>
     <button type="submit">Buscar</button>
     <button type="reset">Limpar</button>
   </form>
@@ -126,3 +126,4 @@ footer a {
 </script>
 </body>
 </html>
+
