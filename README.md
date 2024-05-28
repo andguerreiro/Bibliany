@@ -6,4 +6,4 @@ Criado e atualizado por Andrews Guerreiro, livreiro do [sebomelivro.com](https:/
 
 Logo criado por vectorsmarket15 e baixado de [flaticon.com](https://flaticon.com)
 
-[andrewsguerreiro.gitlab.io/bibliany](https://andrewsguerreiro.gitlab.io/bibliany)
+[andguerreiro.github.io/bibliany/](https://andguerreiro.github.io/bibliany/)
