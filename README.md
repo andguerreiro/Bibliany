@@ -1,6 +1,6 @@
 # Bibliany
 
-Pesquise livros digitais e audiolivros em bibliotecas públicas online
+Pesquise livros digitais e audiolivros em bibliotecas públicas digitais
 
 Criado e atualizado por [Andrews Guerreiro](https://github.com/andguerreiro), livreiro do [Sebo Menos Telas](https://github.com/andguerreiro/sebomenostelas)
 
